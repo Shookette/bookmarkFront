@@ -1,0 +1,17 @@
+.marker-button_button {
+  background-color: #5FCDFF;
+  color: #ffffff;
+  border: none;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.marker-button_button--small {
+  width: 50px;
+}
+
+.marker-button_button--large {
+  width: 100px;
+}

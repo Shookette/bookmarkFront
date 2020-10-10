@@ -1,0 +1,10 @@
+.markers_row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 5px 0;
+}
+
+.markers_row > * {
+  margin: 0 5px;
+}

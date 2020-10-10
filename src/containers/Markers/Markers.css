@@ -1,0 +1,7 @@
+.markers_content {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}

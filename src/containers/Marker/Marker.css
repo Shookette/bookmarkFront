@@ -1,0 +1,18 @@
+.marker_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.marker_title {
+  padding-top: 20px;
+}
+
+.marker_title, .marker_main {
+  width: 800px;
+  align-items: center;
+  margin: auto;
+}
+
+.marker_element--bold {
+  font-weight: bold;
+}

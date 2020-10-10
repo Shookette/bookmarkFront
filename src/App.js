@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Markers from './containers/Markers/Markers';
+import Marker from './containers/Marker/Marker';
 
-function App() {
+const App = ({ location }) => {
+  if (location.pathname === '/') {
+    return <Redirect to="/markers" />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch location={location}>
+        <Route path="/markers" component={Markers} />
+        <Route path="/marker/:id" component={Marker} />
+        <Route path="/marker/:id/edit" component={Marker} />
+      </Switch>
+    </>
   );
 }
 
