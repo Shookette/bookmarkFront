@@ -13,8 +13,7 @@ const App = ({ location }) => {
     <>
       <Switch location={location}>
         <Route path="/markers" component={Markers} />
-        <Route path="/marker/:id" component={Marker} />
-        <Route path="/marker/:id/edit" component={Marker} />
+        <Route path="/marker/:id/:edit?" component={Marker} />
       </Switch>
     </>
   );

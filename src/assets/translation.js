@@ -22,7 +22,12 @@ export const translation = {
           width: 'Marker Largeur:',
           height: 'Marker Hauteur:',
           length: 'Marker Durée:',
+          keyword: 'Mots clées'
         }
+      },
+      addMarker: {
+        title: "Besoin d'un mémo ?",
+        submit: "+"
       },
       listingMarker: {
         link: 'Lien Direct',
@@ -58,7 +63,12 @@ export const translation = {
           width: 'Marker Width:',
           height: 'Marker Height:',
           length: 'Marker Length:',
+          keyword: 'Keywords'
         }
+      },
+      addMarker: {
+        title: "Need memory ?",
+        submit: "+"
       },
       listingMarker: {
         link: 'Direct Link',

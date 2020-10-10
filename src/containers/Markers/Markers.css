@@ -5,3 +5,7 @@
   align-items: center;
   margin: auto;
 }
+
+.markers_content > * {
+  margin-bottom: 20px;
+}

@@ -5,6 +5,32 @@
   padding: 5px 0;
 }
 
-.markers_row > * {
+.markers_info {
+  width: 700px;
+  display: flex;
+}
+
+.markers_info > span {
   margin: 0 5px;
+  display: inline-block;
+}
+
+.markers_info--ellipsis {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.markers_button {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.markers_info a {
+  text-decoration: none;
+  color: #5FCDFF;
+  font-weight: bold;
 }

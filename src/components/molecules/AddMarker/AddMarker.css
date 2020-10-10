@@ -1,0 +1,29 @@
+.add-marker_container {
+  display: flex;
+}
+
+.add-marker_container form > * {
+  margin: 0 5px;
+}
+
+.add-marker_label {
+  font-size: 20px;
+}
+
+.add-marker_input {
+  width: 400px;
+  height: 30px;
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+.add-marker_button {
+  background-color: #5FCDFF;
+  color: #ffffff;
+  border: none;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+}

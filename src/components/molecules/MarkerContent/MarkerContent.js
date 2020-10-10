@@ -24,8 +24,7 @@ const MarkerContent = ({ type, url, title }) => {
           width="480" 
           height="260" 
           frameborder="0" 
-          allow="autoplay; fullscreen"
-          allowfullscreen />
+          allow="autoplay; fullscreen"/>
       )
     } else {
       return (
