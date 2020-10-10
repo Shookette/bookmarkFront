@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MarkerContent.css';
 
-const MarkerContent = ({ type, url }) => {
+const MarkerContent = ({ type, url, title }) => {
   const [ realUrl, setRealUrl ] = useState(url);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const MarkerContent = ({ type, url }) => {
     if (type === 'video') {
       return (
         <iframe 
+          title={title}
           src={realUrl} 
           className="marker-content_element"
           width="480" 
@@ -27,7 +28,11 @@ const MarkerContent = ({ type, url }) => {
           allowfullscreen />
       )
     } else {
-      return <a href={realUrl} target="blank"><img className="marker-content_element" src={realUrl} /></a>
+      return (
+        <a href={realUrl} target="blank">
+          <img className="marker-content_element" alt={title} src={realUrl} />
+        </a>
+      )
     }
   }
 

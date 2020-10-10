@@ -22,7 +22,7 @@ const Marker = ({ location, history }) => {
   return (
     <Page location={location} history={history}>
       <div className="marker_container">
-        <MarkerContent type={marker.type} url={marker.url} />
+        <MarkerContent type={marker.type} url={marker.url} title={marker.title} />
         <h2 className="marker_title">{marker.title}</h2>
         <div className="marker_main">
           <h3>{t('marker.title.principal')}</h3>
