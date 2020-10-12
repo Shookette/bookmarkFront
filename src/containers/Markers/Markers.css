@@ -1,6 +1,6 @@
 .markers_content {
   display: flex;
-  width: 800px;
+  width: 80%;
   flex-direction: column;
   align-items: center;
   margin: auto;
@@ -8,4 +8,10 @@
 
 .markers_content > * {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .markers_content {
+    width: 100%;
+  }
 }

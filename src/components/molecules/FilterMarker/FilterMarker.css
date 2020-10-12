@@ -1,6 +1,14 @@
 .filter-marker_input {
-  width: 400px;
+  width: 80%;
   height: 30px;
   padding: 0 30px;
   font-size: 20px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .filter-marker_input {
+    width: 90%;
+    padding: 0 10px;
+  }
 }

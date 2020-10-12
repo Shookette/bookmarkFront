@@ -1,3 +1,7 @@
+.listing-marker_container {
+  width: 100%;
+}
+
 .markers_row {
   display: flex;
   align-items: center;
@@ -6,7 +10,7 @@
 }
 
 .markers_info {
-  width: 700px;
+  width: 80%;
   display: flex;
 }
 
@@ -16,14 +20,14 @@
 }
 
 .markers_info--ellipsis {
-  width: 150px;
+  width: 25%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .markers_button {
-  width: 100px;
+  width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -33,4 +37,15 @@
   text-decoration: none;
   color: #5FCDFF;
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 640px) {
+  .markers_info {
+    width: 80%;
+  }
+
+  .markers_button {
+    width: 20%;
+  }
 }

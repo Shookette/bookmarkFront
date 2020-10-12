@@ -9,7 +9,7 @@
 }
 
 .marker_title, .marker_main {
-  width: 800px;
+  width: 80%;
   align-items: center;
   margin: auto;
 }
@@ -24,14 +24,25 @@
 
 .marker_form-control label {
   display: inline-flex;
-  width: 150px;
+  width: 40%;
   margin-right: 20px;
 }
 
 .marker_form-control input {
-  width: 400px;
+  width: 50%;
   height: 30px;
   border-radius: 5px;
   font-size: 14px;
   padding: 0 5px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .marker_form-control label {
+    width: 100%;
+  }
+  
+  .marker_form-control input {
+    width: 100%;
+  }
 }
