@@ -7,7 +7,10 @@ const AddMarker = ({ handleAdd }) => {
   const { register, handleSubmit } = useForm();
   const { t } = useTranslation();
 
-  const onSubmit = data => handleAdd(data);
+  const onSubmit = (data, e) => {
+    e.target.reset();
+    handleAdd(data);
+  }
 
   return (
     <div className="add-marker_container">

@@ -9,7 +9,7 @@ const ListingMarker = ({ markers, handleDeleteAction }) => {
   
   const renderMarkerRow = marker => {
     return (
-      <div className="markers_row">
+      <div key={marker._id} className="markers_row">
         <div className="markers_info">
           <span className="markers_info--ellipsis">{marker.title}</span>
           <span><a href={marker.url} alt={marker.url} target="blank">{t('listingMarker.link')}</a></span>
@@ -18,9 +18,9 @@ const ListingMarker = ({ markers, handleDeleteAction }) => {
           <span className="markers_info--ellipsis">{marker.date}</span>
         </div>
         <div className="markers_button">
-          <MarkerLink link={`/marker/${marker.id}`} text={t('listingMarker.moreDetail')} />
-          <MarkerLink link={`/marker/${marker.id}/edit`} text={t('listingMarker.edit')} />
-          <MarkerButton handleAction={() => handleDeleteAction(marker.id)} text={t('listingMarker.delete')} />
+          <MarkerLink link={`/marker/${marker._id}`} text={t('listingMarker.moreDetail')} />
+          <MarkerLink link={`/marker/${marker._id}/edit`} text={t('listingMarker.edit')} />
+          <MarkerButton handleAction={() => handleDeleteAction(marker._id)} text={t('listingMarker.delete')} />
         </div>
       </div>
     );

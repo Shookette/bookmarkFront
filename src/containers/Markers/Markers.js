@@ -16,7 +16,7 @@ const Markers = ({ location, history }) => {
   useEffect(() => {
     (async () => {
       const data = await getMarkers();
-      setMarkerList(data);
+      setMarkerList(!!data.data ? data.data : []);
     })()
   }, []);
   
@@ -30,9 +30,18 @@ const Markers = ({ location, history }) => {
     setMarkerListFiltered(filter);
   }
 
-  const handleDelete = async id => await deleteMarker(id);
+  const handleDelete = async id => {
+    await deleteMarker(id);
+    const data = await getMarkers();
+    setMarkerList(!!data && !!data.data ? data.data : []);
+  }
 
-  const handleAdd = async data => await postMarker(data);
+  const handleAdd = async data => {
+    const newPost = await postMarker(data);
+    if (!!newPost.data) {
+      setMarkerList([ ...markerList, newPost.data]);
+    }
+  }
  
   return (
     <Page location={location} history={history}>

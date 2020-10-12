@@ -18,14 +18,11 @@ const Marker = ({ location, history }) => {
   useEffect(() => {
     (async () => {
       const data = await getMarker(id);
-      setMarker(data);
+      setMarker(!!data && !!data.data ? data.data : {});
     })()
-  })
+  }, [ id ]);
 
-  const onSubmit = data => {
-    console.log('data::', data);
-    patchMarker(id, data)
-  }
+  const onSubmit = data => patchMarker(id, data);
 
   return (
     <Page location={location} history={history}>
@@ -75,7 +72,7 @@ const Marker = ({ location, history }) => {
               <label className="marker_element--bold">{t('marker.element.keyword')}</label>
               <input name="keyword" ref={register} disabled={isDisabled} defaultValue={marker.keyword}/>
             </div>
-            <input type="submit" />
+            <input type="submit" disabled={isDisabled} />
           </div>
         </form>
       </div>
