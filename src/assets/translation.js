@@ -21,7 +21,7 @@ export const translation = {
           date: 'Marker Date:',
           width: 'Marker Largeur:',
           height: 'Marker Hauteur:',
-          length: 'Marker Durée:',
+          duration: 'Marker Durée:',
           keyword: 'Mots clées'
         }
       },
@@ -62,7 +62,7 @@ export const translation = {
           date: 'Marker Date:',
           width: 'Marker Width:',
           height: 'Marker Height:',
-          length: 'Marker Length:',
+          duration: 'Marker Duration:',
           keyword: 'Keywords'
         }
       },

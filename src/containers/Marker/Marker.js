@@ -61,8 +61,8 @@ const Marker = ({ location, history }) => {
             </div>
             { marker.type === 'video' && (
               <div className="marker_form-control">
-                <label className="marker_element--bold">{t('marker.element.length')}</label>
-                <input name="length" ref={register} disabled={isDisabled} defaultValue={marker.length}/>
+                <label className="marker_element--bold">{t('marker.element.duration')}</label>
+                <input name="duration" ref={register} disabled={isDisabled} defaultValue={marker.duration}/>
               </div>
             )}
           </div>
